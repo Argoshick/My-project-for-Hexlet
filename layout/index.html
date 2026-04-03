@@ -3,82 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Система заметок с тегами</title>
+    <title>Система заметок с тегами - Manrope</title>
+
+    <!-- Подключение шрифта Manrope -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <header class="header">
-        
+    <!--header-->
+    <header class="header">
         <nav>
             <h1>Notes&Tegs</h1>
             <a href="#">Главная</a>
-            <a href="#"></a>
+            <a href="#">Задачи</a>
         </nav>
-        <button>Начать</button>
+
+        <div class="header-actions">
+            <button id="themeToggle" class="theme-btn">🌙</button>
+            <a href="#">
+                <button id="goButton" class="go-btn">Начать</button>
+            </a>
+        </div>
     </header>
 
-    <!-- ОСНОВНОЙ КОНТЕНТ -->
     <main>
-        <div>
-            <p></p>
-        </div>
-        <section>
+        <!-- info section-->
+        <section class="info">
             <h2>Перестаньте держать все в голове с помощью Notes&Tegs!</h2>
             <p>Notes&Tegs — это инструмент который поможет перенести все идеи и планы из головы в удобный электронный формат.</p>
         </section>
-        <button>к заметкам</button>
         
-        <section>
-            <div>
-                <section>
-                    <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla dolores dignissimos cupiditate assumenda? Deserunt cumque optio expedita ipsum sequi iure, itaque et. Ipsa ab ducimus blanditiis iusto dignissimos doloremque fugiat.</h2>
-                    <div>
-                        <h3>1</h3>
-                        <p>jdeknk</p>
-                    </div>
+        <div class="heading-wrapper">
+            <h2 class="heading">возможности заметок с тегами</h2>
+        </div>
+        
+        <section id="ability">
+            <div class="card-info">
+                <div class="card-icon">🔍</div>
+                <h3>Быстрый поиск всего по теме</h3>
+                <p>Тег работает как кнопка «показать всё на эту тему</p>
+            </div>
 
-                    <div>
-                        <h3>2</h3>
-                        <p>jdeknk</p>
-                    </div>
-                    
-                    <div>
-                        <h3>3</h3>
-                        <p>jdeknk</p>
-                    </div>
-                    
-                    <div>
-                        <h3>4</h3>
-                        <p>jdeknk</p>
-                    </div>
-                </section>
+            <div class="card-info">
+                <div class="card-icon">📌</div>
+                <h3>Одна заметка — в двух местах сразу</h3>
+                <p>Теги позволяют не дублировать заметку, а просто привязать её к разным разделам</p>
+            </div>
+            
+            <div class="card-info">
+                <div class="card-icon">⏰</div>
+                <h3>Не забыть важное</h3>
+                <p>Тег выделяет срочные дела и собирает их в одном списке</p>
+            </div>
+            
+            <div class="card-info">
+                <div class="card-icon">💼</div>
+                <h3>Отделить работу от личного</h3>
+                <p>С помощью тегов можно хранить всё вместе, но смотреть по отдельности</p>
             </div>
         </section>
-
-    
-
-
-
-
-
-
-
-
     </main>
 
-
-
-
-
-
-
-
-
-    <footer>
-        <p>&copy; 2026 Название компании. Все права защищены.</p>
+    <!-- footer section-->
+    <footer class="footer">
+        <p>&copy; 2026 Notes&Tegs. Все права защищены.</p>
     </footer>
-    
 
-    
+    <script src="darktheme.js"></script>
 </body>
 </html>
