@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Закрыть меню при клике на фон (оверлей)
+    // Закрыть меню при клике на фон 
     if (burgerMenu) {
         burgerMenu.addEventListener('click', function(e) {
             // Закрываем только если кликнули именно на фон, а не на контент

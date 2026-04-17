@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes&Tegs - Бургер меню</title>
+    <title>Notes&Tegs - Мои заметки</title>
 
     <!-- Подключение шрифта Manrope -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,35 +19,77 @@
 
         <div class="header-actions">
             <button id="themeToggle" class="theme-btn">🌙</button>
-            <!-- Кнопка бургер-меню (всегда видна) -->
             <button id="burgerBtn" class="burger-btn">☰</button>
         </div>
     </header>
 
-    <!-- Бургер-меню (всплывающее) -->
+    <!-- Бургер-меню -->
     <div id="burgerMenu" class="burger-menu">
         <div class="burger-menu-content">
             <button id="closeBurger" class="close-burger">✕</button>
             <nav class="burger-nav">
                 <a href="index.html">Главная</a>
                 <a href="pages2.html">Заметки</a>
-                <a href="#">Теги</a>
-                <a href="#">Архив</a>
-                <a href="#">Настройки</a>
             </nav>
         </div>
     </div>
 
     <main>
-        <!-- Пустой main, но в стиле первой страницы -->
+        <div class="notes-app">
+            <!-- Боковая панель с тегами -->
+            <aside class="sidebar">
+                <h3>Теги</h3>
+                <div class="tags-list" id="tagsList">
+                    <button class="tag-filter active" data-tag="all">Все заметки</button>
+                </div>
+                <button id="resetFilters" class="reset-btn">Сбросить фильтры</button>
+            </aside>
+
+            <!-- Основная область -->
+            <div class="notes-content">
+                <div class="notes-header">
+                    <h2>Мои заметки</h2>
+                    <button id="addNoteBtn" class="add-note-btn">+ Новая заметка</button>
+                </div>
+
+                <!-- Поиск -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="🔍 Поиск по заметкам или тегам...">
+                </div>
+
+                <!-- Список заметок -->
+                <div id="notesList" class="notes-list">
+                    <!-- Заметки будут появляться здесь -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно для добавления/редактирования заметки -->
+        <div id="noteModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Новая заметка</h3>
+                    <button class="close-modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="noteTitle" placeholder="Заголовок заметки">
+                    <textarea id="noteContent" rows="5" placeholder="Текст заметки..."></textarea>
+                    <input type="text" id="noteTags" placeholder="Теги (через запятую, например: работа, важное, идеи)">
+                    <div class="modal-actions">
+                        <button id="saveNoteBtn" class="save-btn">Сохранить</button>
+                        <button id="deleteNoteBtn" class="delete-btn" style="display: none;">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- footer section -->
     <footer class="footer">
         <p>&copy; 2026 Notes&Tegs. Все права защищены.</p>
     </footer>
 
     <script src="darktheme.js"></script>
     <script src="burger.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
